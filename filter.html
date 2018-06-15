@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <link rel="stylesheet" href="css/css.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="data in point">
+				<img :src="data.Picture1"/>
+				{{data.Name}}
+			</li>
+		</ul>
+	</div>
+	
+</body>
+<script src="js/js.js"></script>
+</html>
