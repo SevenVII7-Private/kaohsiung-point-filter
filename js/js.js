@@ -2,6 +2,7 @@ var areas = ["全高雄","楠梓區","左營區","鼓山區","三民區","鹽埕
 
 var urlData = {
     point: [],
+    select: [],
     area: areas,
 };
 
@@ -19,6 +20,7 @@ function a001(){
         if( result.success === true ){
             console.log(result);
             urlData.point = result.result.records; 
+            urlData.select = result.result.records; 
             console.log(urlData.point);
   		}  
   	}
@@ -30,5 +32,10 @@ xhr.send(null);
 
 var vm = new Vue ({
     el: "#app",
-    data: urlData
+    data: urlData,
+    methods: {
+        ccc: function(data){
+            console.log(data);
+        }
+    }
 })

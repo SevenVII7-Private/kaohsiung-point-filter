@@ -8,6 +8,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 </head>
 <body>
+	<div class="header">
+		<p>Filter</p>
+	</div>
 	<div id="app">
 		<div class="contener">
 			<div class="control">
@@ -20,14 +23,17 @@
 					<h2>條件篩選</h2>
 					<div class="select">
 						<ul>
-							<li class="selectItem" v-for="data in area">{{data}}</li>
+							<li v-for="data in area">
+								<input type="radio" name="select"  v-on:checked="ccc(data)" :value="data" :id="data">
+								<label :for="data" class="selectItem">{{data}}</label>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="area">
 				<ul>
-					<li class="item" v-for="data in point">
+					<li class="item" v-for="data in select">
 						<div class="imgBox" :style="'background-image: url('+data.Picture1+')'"></div>
 						<div class="textBox">
 							<p class="name">{{data.Name}}</p>

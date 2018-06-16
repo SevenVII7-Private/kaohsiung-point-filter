@@ -7,8 +7,23 @@
 	/*outline:solid 1px #f00;*/
 }
 
+.header {
+	width: 100%;
+	background-color: #540032;
+	text-align: center;
+}
+.header p {
+	display: inline-block;
+	margin: 8px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff;
+}
+
+
+
 #app {
-	background-color: #222231;
+	background-color: #2E112D;
 }
 
 .contener{
@@ -80,15 +95,28 @@ h2 {
 	display: inline-block;
 	width: 80%;
 }
+.select li {
+	display: inline-block;
+}
+.select input {
+	display: none;
+}
 .selectItem {
-	padding: 5px 10px;
+	padding: 5px 15px;
 	margin: 5px;
 	display: inline-block;
 	border: solid 1px #C9283E;
 	border-radius: 50px;
 	font-size: 16px;
 	line-height: 16px;
+	cursor: pointer;
 }
+.select input:checked + .selectItem {
+	background-color: #C9283E;
+	color:#fff;
+	font-weight: bold;
+}
+
 
 
 
@@ -145,7 +173,7 @@ p.zone {
 	display: inline-block;
 	line-height: 16px;
 	font-size: 16px;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	background-color: #C9283E;
 	border-radius: 100px;
 	color:#fff;
