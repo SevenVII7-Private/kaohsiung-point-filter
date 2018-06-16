@@ -1,4 +1,61 @@
-li img {
-	width: 100px;
-	height: 100px;
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "微軟正黑體";
+	font-size: 0;
+	box-sizing: border-box;
+	/*outline:solid 1px #f00;*/
 }
+
+#app {
+	background-color: #222;
+}
+
+.item {
+	width: 40%;
+	margin: 8px;
+	display: inline-block;
+	background-color: #eee;
+}
+
+
+.imgBox {
+	width: 168px;
+	height: 168px;
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+	vertical-align: top;
+}
+.textBox {
+	width: calc(100% - 168px - 16px);
+	margin: 8px;
+	display: inline-block;
+	vertical-align: top;
+}
+.textBox p {
+	display: block;
+	line-height: 24px;
+	/*width: 70%;*/
+	margin: 8px;
+	color: #222;
+}
+p.name {
+	font-size: 24px;
+	font-weight: bold;
+	color: #C9283E;
+}
+p.description {
+	font-size: 16px;
+	max-height: 72px;
+	overflow: hidden;
+}
+p.opentime {
+	line-height: 14px;
+	font-size: 14px;
+	font-weight: bold;
+	max-height: 14px;
+	overflow: hidden;
+	color:#999;
+}
+

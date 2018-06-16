@@ -25,7 +25,6 @@ xhr.send(null);
 
 
 
-
 var vm = new Vue ({
     el: "#app",
     data: urlData

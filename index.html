@@ -9,9 +9,13 @@
 <body>
 	<div id="app">
 		<ul>
-			<li v-for="data in point">
-				<img :src="data.Picture1"/>
-				{{data.Name}}
+			<li class="item" v-for="data in point">
+				<div class="imgBox" :style="'background-image: url('+data.Picture1+')'"></div>
+				<div class="textBox">
+					<p class="name">{{data.Name}}</p>
+					<p class="description">{{data.Description}}</p>
+					<p class="opentime">{{data.Opentime}}</p>
+				</div>
 			</li>
 		</ul>
 	</div>
