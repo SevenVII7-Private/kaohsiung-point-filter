@@ -3,21 +3,44 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	 <link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 </head>
 <body>
 	<div id="app">
-		<ul>
-			<li class="item" v-for="data in point">
-				<div class="imgBox" :style="'background-image: url('+data.Picture1+')'"></div>
-				<div class="textBox">
-					<p class="name">{{data.Name}}</p>
-					<p class="description">{{data.Description}}</p>
-					<p class="opentime">{{data.Opentime}}</p>
+		<div class="contener">
+			<div class="control">
+				<div class="controlArea">
+					<h2>關鍵字篩選</h2>
+					<div class="inquire">
+						<input type="text" class="inquireDo" placeholder="請輸入關鍵字">
+						<i class="fas fa-search"></i>
+					</div>
+					<h2>條件篩選</h2>
+					<div class="select">
+						<ul>
+							<li class="selectItem" v-for="data in area">{{data}}</li>
+						</ul>
+					</div>
 				</div>
-			</li>
-		</ul>
+			</div>
+			<div class="area">
+				<ul>
+					<li class="item" v-for="data in point">
+						<div class="imgBox" :style="'background-image: url('+data.Picture1+')'"></div>
+						<div class="textBox">
+							<p class="name">{{data.Name}}</p>
+							<p class="description">{{data.Description}}</p>
+							<p class="zone">{{data.Zone}}</p>
+							<p class="add"><i class="fas fa-map-marker-alt"></i>{{data.Add}}</p>
+							<p class="opentime" :alt="data.Opentime"><i class="far fa-calendar-alt"></i>{{data.Opentime}}</p>
+							<p class="tel"><i class="fas fa-phone"></i>{{data.Tel}}</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	
 </body>
