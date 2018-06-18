@@ -19,8 +19,8 @@ function a001(){
            
         if( result.success === true ){
             console.log(result);
-            urlData.point = result.result.records; 
-            urlData.select = result.result.records; 
+            urlData.point = Array.from(result.result.records); 
+            urlData.select = Array.from(result.result.records); 
             console.log(urlData.point);
   		}  
   	}
@@ -36,6 +36,13 @@ var vm = new Vue ({
     methods: {
         ccc: function(data){
             console.log(data);
+            // data.select.push(1);
+            urlData.select.length=2;
+            console.log(urlData.point);
+            console.log(urlData.select);
+
+            return urlData.select;
+
         }
     }
 })

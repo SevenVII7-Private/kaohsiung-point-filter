@@ -24,7 +24,7 @@
 					<div class="select">
 						<ul>
 							<li v-for="data in area">
-								<input type="radio" name="select"  v-on:checked="ccc(data)" :value="data" :id="data">
+								<input type="radio" name="select"  v-on:click="ccc(data)" :value="data" :id="data">
 								<label :for="data" class="selectItem">{{data}}</label>
 							</li>
 						</ul>
