@@ -28,7 +28,7 @@
 
 .contener{
 	width: 90%;
-	max-width: 1366px;
+	max-width: 1200px;
 	margin: auto;
 }
 .control{
@@ -42,7 +42,7 @@
 	display: inline-block;
 	width: 70%;
 	text-align: center;
-	padding: 8px;
+	padding: 32px 16px;
 }
 
 
@@ -52,7 +52,7 @@
 .controlArea {
 	width: calc(100% - 16px);
 	background-color: #fff;
-	margin: 8px;
+	margin: 24px 8px;
 	padding: 16px;
 	text-align: center;
 }
@@ -95,6 +95,9 @@ h2 {
 	display: inline-block;
 	width: 80%;
 }
+.select ul {
+	text-align: left;
+}
 .select li {
 	display: inline-block;
 }
@@ -102,7 +105,7 @@ h2 {
 	display: none;
 }
 .selectItem {
-	padding: 5px 15px;
+	padding: 5px 29px;
 	margin: 5px;
 	display: inline-block;
 	border: solid 1px #C9283E;
@@ -123,8 +126,8 @@ h2 {
 
 
 .item {
-	width: 95%;
-	margin: 8px;
+	width: 100%;
+	margin-bottom: 16px;
 	text-align: left;
 	display: inline-block;
 	background-color: #eee;
