@@ -4,6 +4,7 @@ var urlData = {
     point: [],
     select: [],
     area: areas,
+    text:"",
 };
 
 const url = "https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97";
@@ -36,17 +37,27 @@ var vm = new Vue ({
     methods: {
         ccc: function(data){
             this.select = []
-            console.log(data)
+            console.log(data);
             if (data == "全高雄") {
                 this.select = this.point
             }
             else {
                 for(var i = 0 ; i < this.point.length; i++ ){
                     if(this.point[i].Zone == data){
-                        this.select.splice(0,0,this.point[i])
+                        this.select.push(this.point[i])
                     }
                 }
             } 
+        },
+        aaa: function(){
+            this.select = []
+            console.log(this.text);
+            for(var i = 0 ; i < this.point.length; i++ ){
+                if(this.point[i].Name.match(this.text) != null){
+                    this.select.push(this.point[i])
+                }
+            }
+            this.text=""
         }
     }
 });
