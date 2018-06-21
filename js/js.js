@@ -35,14 +35,18 @@ var vm = new Vue ({
     data: urlData,
     methods: {
         ccc: function(data){
-            console.log(data);
-            // data.select.push(1);
-            urlData.select.length=2;
-            console.log(urlData.point);
-            console.log(urlData.select);
-
-            return urlData.select;
-
+            this.select = []
+            console.log(data)
+            if (data == "全高雄") {
+                this.select = this.point
+            }
+            else {
+                for(var i = 0 ; i < this.point.length; i++ ){
+                    if(this.point[i].Zone == data){
+                        this.select.splice(0,0,this.point[i])
+                    }
+                }
+            } 
         }
     }
-})
+});
